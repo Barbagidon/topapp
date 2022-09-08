@@ -1,0 +1,28 @@
+.filled {
+	transition: 0.3s all;
+	fill: var(--primary);
+}
+
+.star {
+	margin-right: 5px;
+	cursor: pointer;
+}
+
+.starWrapper {
+	display: inline-block;
+}
+
+.errorMessage {
+	position: absolute;
+	bottom: -20px;
+	left: 0;
+	color: var(--red);
+}
+
+.error svg {
+	stroke: var(--red);
+}
+
+.raitingWrapper {
+	position: relative;
+}

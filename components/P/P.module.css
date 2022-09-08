@@ -1,0 +1,18 @@
+.p {
+	color: var(--black);
+}
+
+.large {
+	font-size: var(--large-p-size);
+	line-height: 29px;
+}
+
+.medium {
+	font-size: var(--medium-p-size);
+	line-height: 24px;
+}
+
+.small {
+	font-size: var(--small-p-size);
+	line-height: 24px;
+}
