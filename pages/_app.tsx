@@ -7,17 +7,18 @@ import ym from "react-yandex-metrika";
 import { YMInitializer } from "react-yandex-metrika";
 import router from "next/router";
 
+router.events.on("routeChangeComplete", (url: string) => {
+  if (typeof window !== "undefined") {
+    ym("hit", url);
+  }
+});
+
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   const [url, setUrl] = useState("https://somehardcoded.url");
   useEffect(() => {
     setUrl(window.location.href);
   }, []);
 
-  router.events.on("routeChangeComplete", (url: string) => {
-    if (typeof window !== "undefined") {
-      ym("hit", url);
-    }
-  });
   return (
     <>
       <Head>

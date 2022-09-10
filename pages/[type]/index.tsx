@@ -6,11 +6,12 @@ import axios from "axios";
 import { ParsedUrlQuery } from "querystring";
 import { TopLevelCategory } from "../../interfaces/page.interface";
 import { API } from "../../heplers/api";
+import { Htag } from "../../components/Htag/Htag";
 
-function Type({ firstCategory }): JSX.Element {
+function Type(): JSX.Element {
   return (
     <>
-      <h2>{firstCategory}</h2>
+      <Htag tag="h1">Выберите курс в разделе курсы</Htag>
     </>
   );
 }

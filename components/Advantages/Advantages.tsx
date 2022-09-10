@@ -1,5 +1,4 @@
 import styles from "./Advantages.module.css";
-import cn from "classnames";
 
 import { AdvantagesProps } from "./Adavantages.props";
 

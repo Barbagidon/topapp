@@ -8,7 +8,7 @@ import { Button } from "../Button/Button";
 import { fixPrice, num_word } from "../../heplers/helpers";
 import { Divider } from "../Divider/Divider";
 import Image from "next/image";
-import { ForwardedRef, forwardRef, useEffect, useRef, useState } from "react";
+import { ForwardedRef, forwardRef, useRef, useState } from "react";
 import { Review } from "../Review/Review";
 import { ReviewForm } from "../ReviewForm/ReviewForm";
 import { motion } from "framer-motion";
@@ -20,6 +20,7 @@ export const Product = motion(
       ref: ForwardedRef<HTMLDivElement>
     ): JSX.Element => {
       const [isReviewOpened, setIsReviewOpened] = useState<boolean>(false);
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const [imgSrc, setImgSrc] = useState<string>(
         product.image.includes("http")
           ? "/noimage.svg"

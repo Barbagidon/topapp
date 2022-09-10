@@ -32,7 +32,6 @@ export const Menu = (): JSX.Element => {
           marginBottom: 20,
           transition: {
             when: "afterChildren",
-            staggerChildren: 0.1,
           },
         },
     hidden: {

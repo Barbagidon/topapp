@@ -1,6 +1,5 @@
 import { HHDataProps } from "./HHData.props";
 import styles from "./HHData.module.css";
-import cn from "classnames";
 import { Card } from "../Card/Card";
 import RateIcon from "./rate.svg";
 import { fixPrice } from "../../heplers/helpers";

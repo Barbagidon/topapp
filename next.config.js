@@ -1,11 +1,10 @@
+// eslint-disable-next-line no-undef
 module.exports = {
   images: {
     domains: ["courses-top.ru"],
   },
-  compiler: {
-    // ssr and displayName are configured by default
-    styledComponents: true,
-  },
+
+  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type, @typescript-eslint/no-unused-vars
   webpack(config, options) {
     config.module.rules.push({
       loader: "@svgr/webpack",

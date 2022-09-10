@@ -10,7 +10,7 @@ export const P = ({
 }: PProps): JSX.Element => {
   return (
     <p
-      className={cn(styles.p, {
+      className={cn(styles.p, className, {
         [styles.large]: size === "large",
         [styles.medium]: size === "medium",
         [styles.small]: size === "small",

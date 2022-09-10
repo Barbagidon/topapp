@@ -1,5 +1,5 @@
 import { SortEnum, SortProps } from "./Sort.props";
-import { KeyboardEvent } from "react";
+
 import SortIcon from "./sort.svg";
 import styles from "./Sort.module.css";
 import cn from "classnames";
@@ -10,15 +10,6 @@ export const Sort = ({
   setSort,
   ...props
 }: SortProps): JSX.Element => {
-  const handleKey = (
-    e: KeyboardEvent<HTMLSpanElement>,
-    sortType: SortEnum
-  ): void => {
-    if (e.code === "Enter") {
-      setSort(sortType);
-    }
-  };
-
   return (
     <div className={cn(styles.sort, className)} {...props}>
       <div className={styles.sortName} id="sort">
