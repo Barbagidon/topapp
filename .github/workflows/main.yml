@@ -19,5 +19,5 @@ jobs:
           registry: docker.pkg.github.com
           name: docker.pkg.github.com/Barbagidon/topapp/top-app
           username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
+          password: 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
           tags: "develop"
