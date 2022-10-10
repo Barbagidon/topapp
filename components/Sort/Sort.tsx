@@ -36,7 +36,7 @@ export const Sort = ({
         aria-selected={sort === SortEnum.Price}
         aria-labelledby="sort price"
       >
-        <SortIcon className={styles.sortIcon} /> По цене
+        {/* <SortIcon className={styles.sortIcon} /> По цене */}
       </button>
     </div>
   );
