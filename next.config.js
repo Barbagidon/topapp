@@ -1,5 +1,15 @@
 // eslint-disable-next-line no-undef
 module.exports = {
+  async redirects() {
+    return [
+      {
+        source: "/",
+        destination: "/courses/graphic-design",
+        permanent: true,
+      },
+    ];
+  },
+
   images: {
     domains: ["courses-top.ru"],
   },
