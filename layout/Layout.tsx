@@ -4,13 +4,20 @@ import cn from "classnames";
 import { Header } from "./Header/Header";
 import { Sidebar } from "./Sidebar/Sidebar";
 import { Footer } from "./Footer/Footer";
-import { FunctionComponent, useState, KeyboardEvent, useRef } from "react";
+import {
+  FunctionComponent,
+  useState,
+  KeyboardEvent,
+  useRef,
+  useEffect,
+} from "react";
 import { AppContextProvider, IAppContext } from "../context/app.context";
 import { Up } from "../components/Up/Up";
 
 const Layout = ({ children }: LayoutProps): JSX.Element => {
   const [isSkipLinkDisplayed, setisSkipLinkDisplayed] =
     useState<boolean>(false);
+  const [tabIndex, setTabindex] = useState<number>(0);
   const bodyRef = useRef<HTMLDivElement>(null);
 
   const skipContentAction = (key: KeyboardEvent<HTMLAnchorElement>): void => {
@@ -20,6 +27,12 @@ const Layout = ({ children }: LayoutProps): JSX.Element => {
     }
     setisSkipLinkDisplayed(false);
   };
+
+  useEffect(() => {
+    if (window.innerWidth < 840) {
+      setTabindex(-1);
+    }
+  }, []);
 
   return (
     <div className={styles.wrapper}>
@@ -36,7 +49,12 @@ const Layout = ({ children }: LayoutProps): JSX.Element => {
       <Header className={styles.header} />
 
       <Sidebar className={styles.sidebar} />
-      <main ref={bodyRef} className={styles.body} role="main">
+      <main
+        tabIndex={tabIndex}
+        ref={bodyRef}
+        className={styles.body}
+        role="main"
+      >
         {children}
       </main>
 
