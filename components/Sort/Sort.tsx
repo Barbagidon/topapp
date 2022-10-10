@@ -24,8 +24,7 @@ export const Sort = ({
         aria-selected={sort === SortEnum.Raitng}
         aria-labelledby="sort raiting"
       >
-        По рейтингу
-        {/* <SortIcon className={styles.sortIcon} /> По рейтингу */}
+        <SortIcon className={styles.sortIcon} /> По рейтингу
       </button>
 
       <button
@@ -37,8 +36,7 @@ export const Sort = ({
         aria-selected={sort === SortEnum.Price}
         aria-labelledby="sort price"
       >
-        По цене
-        {/* <SortIcon className={styles.sortIcon} /> По цене */}
+        <SortIcon className={styles.sortIcon} /> По цене
       </button>
     </div>
   );

@@ -10,7 +10,11 @@ export const Sidebar = ({ className, ...props }: SidebarProps): JSX.Element => {
     <>
       <div className={cn(className, styles.sidebar)} {...props}>
         <Logo className={styles.logo} />
-        <Search />
+        <Search
+          style={{
+            display: "none",
+          }}
+        />
         <Menu />
       </div>
     </>
