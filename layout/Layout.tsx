@@ -17,7 +17,7 @@ import { Up } from "../components/Up/Up";
 const Layout = ({ children }: LayoutProps): JSX.Element => {
   const [isSkipLinkDisplayed, setisSkipLinkDisplayed] =
     useState<boolean>(false);
-  const [tabIndex, setTabindex] = useState<number>(0);
+  const [tabIndex, setTabindex] = useState<number>();
   const bodyRef = useRef<HTMLDivElement>(null);
 
   const skipContentAction = (key: KeyboardEvent<HTMLAnchorElement>): void => {
@@ -28,10 +28,16 @@ const Layout = ({ children }: LayoutProps): JSX.Element => {
     setisSkipLinkDisplayed(false);
   };
 
-  useEffect(() => {
-    if (window.innerWidth < 840) {
-      setTabindex(-1);
+  const setTab = () => {
+    if (window.innerWidth > 840) {
+      console.log(window.innerWidth > 840);
+      setTabindex(0);
+      console.log(tabIndex);
     }
+  };
+
+  useEffect(() => {
+    setTab();
   }, []);
 
   return (
