@@ -28,11 +28,9 @@ const Layout = ({ children }: LayoutProps): JSX.Element => {
     setisSkipLinkDisplayed(false);
   };
 
-  const setTab = () => {
+  const setTab = (): void => {
     if (window.innerWidth > 840) {
-      console.log(window.innerWidth > 840);
       setTabindex(0);
-      console.log(tabIndex);
     }
   };
 
